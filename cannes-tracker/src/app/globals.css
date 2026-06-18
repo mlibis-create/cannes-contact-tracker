@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { background: #12131B; color: #F2F0EB; }
+  input, textarea, button { font-family: 'Instrument Sans', sans-serif; }
+}
+
+@layer components {
+  .input-base {
+    @apply w-full px-3 py-3 bg-paid-card border border-white/10 rounded-xl text-paid-white text-sm outline-none placeholder-white/20 focus:border-cannes-gold/50 transition-colors;
+  }
+  .btn-primary {
+    @apply w-full py-3.5 bg-blurple text-white font-bold rounded-xl text-sm tracking-wide active:opacity-80 transition-opacity;
+  }
+  .btn-gold {
+    @apply w-full py-3.5 bg-cannes-gold text-paid-black font-bold rounded-xl text-sm tracking-wide active:opacity-80 transition-opacity;
+  }
+  .btn-ghost {
+    @apply px-3.5 py-2 border border-white/20 rounded-lg text-paid-white text-xs font-bold active:bg-paid-card transition-colors;
+  }
+  .field-label {
+    @apply text-cannes-gold text-[10px] font-bold uppercase tracking-widest mb-1.5 block;
+  }
+  .chip {
+    @apply text-[10px] font-bold uppercase tracking-wider rounded-full px-2.5 py-1 whitespace-nowrap flex-shrink-0;
+  }
+  .chip-hot { @apply bg-blurple/15 text-paid-purple border border-paid-purple/30; }
+  .chip-warm { @apply bg-cannes-gold/15 text-cannes-gold border border-cannes-gold/30; }
+  .chip-cold { @apply bg-teal-200/10 text-teal-200 border border-teal-200/20; }
+  .card {
+    @apply bg-paid-card border border-white/10 rounded-2xl p-4;
+  }
+  .section-rule {
+    @apply border-t border-white/10 my-4;
+  }
+}
